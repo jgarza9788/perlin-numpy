@@ -53,8 +53,9 @@ if __name__ == '__main__':
     import matplotlib.pyplot as plt
     import matplotlib.animation as animation
     
-    np.random.seed(0)
-    noise = generate_fractal_noise_3d((32, 256, 256), (1, 4, 4), 4)
+    np.random.seed(1)
+    # noise = generate_fractal_noise_3d((32, 256, 256), (1, 4, 4), 4)
+    noise = generate_fractal_noise_3d((32,256,256),(1,4,4))
     
     fig = plt.figure()
     images = [[plt.imshow(layer, cmap='gray', interpolation='lanczos', animated=True)] for layer in noise]
